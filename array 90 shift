@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int m[10][10],i,j,k,n;
+    printf("enter the row and col value:");
+    scanf("%d %d",&n,&k);
+    for(i=0;i<n;i++){
+        for(j=0;j<k;j++){
+            printf("m[%d][%d]:",i,j);
+           scanf("%d",&m[i][j]);
+        }
+    }
+    printf("the without rotation of array is:\n");
+    for(i=0;i<n;i++){
+        for(j=0;j<k;j++){
+            printf("%d ",m[i][j]);
+           //scanf("%d",&m[i][j]);
+        }
+         printf("\n\n");
+    }
+    printf("the rotation of array is:\n");
+    for(i=0;i<n;i++){
+        for(j=k-1;j>=0;j--){
+            printf("%d  ",m[j][i]);
+        }
+        printf("\n\n");
+    }
+    return 0;
+}
