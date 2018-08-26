@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main (){
+  int m[10],i,j=0,k=0,n;
+  scanf("%d",&n);
+  for(i=0;i<n;i++){
+  scanf("%d",&m[i]);
+}
+int a[10],b[10];
+  for(i=0;i<n;i++){
+        if(m[i]%2==0){
+            a[j]=m[i];
+            j++;
+        }
+        else{
+            b[k]=m[i];
+            k++;
+        }
+    }
+    int flag=0;
+    if(k<j){
+        flag=1;
+    }
+    else{
+        for(int i=0;i<j;i++){
+            for(int s=0;s<k;s++)
+                if(a[i]<b[s])
+                    flag=0;
+                else{
+                    flag=1;
+                    break;
+                }
+        }
+    }
+    if(flag==1)
+    printf("FALSE");
+    else
+    printf("TRUE");
+
+}
