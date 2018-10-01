@@ -1,0 +1,25 @@
+#include <stdio.h>
+int miss(int [],int);
+int main(void) {
+    int a[10],n,i;
+    scanf("%d",&n);
+    //int k=n;
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    /*for(i=0;i<n;i++){
+        printf("%d",a[i]);
+    }*/
+    int res=miss(a,n);
+    printf("missing number is=%d",res);
+	return 0;
+}
+int miss(int a[],int n){
+    int sum=((n)*(n+1))/2;
+    for(int i=0;i<n-1;i++){
+        sum=sum-a[i];
+    }
+    
+    return sum;
+    
+} 
