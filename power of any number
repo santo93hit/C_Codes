@@ -1,0 +1,14 @@
+#include<stdio.h>
+int powerNumber(int,int);
+int main(){
+    int n,p;
+    scanf("%d %d",&n,&p);
+    int m=powerNumber(n,p);
+    printf("%d",m);
+}
+int powerNumber(int n,int p){
+    if(p==0)
+    return 1;
+    else
+    return n*powerNumber(n,p-1);
+}
