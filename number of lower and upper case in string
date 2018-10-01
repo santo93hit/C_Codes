@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int i,count=0,count2=0,count3=0;
+    char a[20];
+    int len;
+    scanf("%s",a);
+    len=strlen(a);
+    for(i=0;i<len;i++){
+        if(a[i]>=65 && a[i]<=90){
+            count++;
+        }
+        else if(a[i]>=97 && a[i]<=122){
+            count2++;
+        }
+        else{
+            count3++;
+        }
+    }
+    printf("number of upper case in string=%d\n",count);
+    printf("number of lower case in string=%d\n",count2);
+    printf("number of neither u&l case in string=%d\n",count3);
+}
