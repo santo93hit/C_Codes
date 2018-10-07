@@ -1,0 +1,30 @@
+/*
+input-size of array=6
+2 3 4 5 6 7
+output-3 2 5 4 7 6
+*/
+
+#include <stdio.h>
+
+int main(void) {
+    int i,j,n,a[10];
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+       scanf("%d",&a[i]);
+    }
+    int temp;
+    for(i=0;i<n;i++){
+        
+            temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+            i++;
+        
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+	// your code goes here
+	return 0;
+}
+
