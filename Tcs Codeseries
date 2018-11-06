@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int a=1;
+    int b=1;
+    scanf("%d",&n);
+    int x[n];
+    for(int i=0;i<n;i++){
+        int c=3*b;
+        int d=2*a;
+        if(i%2==0){
+            if(i==0){
+                x[i]=a;
+            }
+            else{
+                x[i]=d;
+                a=d;
+            }
+        }
+        else{
+            
+            if(i==1){
+                x[i]=b;
+            }
+            else{
+                x[i]=c;
+                b=c;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    printf("%d ",x[i]);
+    printf("nth value is");
+    printf("%d",x[n-1]);
+}
